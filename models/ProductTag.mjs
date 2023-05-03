@@ -30,4 +30,7 @@ ProductTag.init(
   {
     sequelize,
     timestamps: false
+  }
+);
 
+export default ProductTag;
