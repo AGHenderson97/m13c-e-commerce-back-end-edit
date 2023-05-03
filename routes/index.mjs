@@ -1,8 +1,7 @@
-import pool from '../db/db.mjs';
-import express from 'express';
+import { Router } from 'express';
 import apiRoutes from './api/index.mjs';
 
-const router = express.Router();
+const router = Router();
 
 router.use('/api', apiRoutes);
 
