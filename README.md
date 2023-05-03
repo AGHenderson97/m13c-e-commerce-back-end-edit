@@ -14,23 +14,24 @@ The m13c-e-commerce-back-end is an e-commerce back end application built using E
 - [Technologies](#technologies)
 - [License](#license)
 - [Contributing](#contributing)
-
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
 
 ## Installation
 
 1. Clone the repository.
-2. Install the necessary dependencies by running npm install.
+2. Install the necessary dependencies by running 'npm install'.
 3. Create a .env file at the root of the project and add the following variables with your MySQL credentials and database name:  
 
     - DB_USER=<your_mysql_username>              
     - DB_PW=<your_mysql_password>
     - DB_NAME=<your_database_name>
 
-4. Run mysql -u <your_mysql_username> -p and enter your MySQL password when prompted.
-5. In the MySQL shell, run source db/schema.sql; to create the database.
-6. Exit the MySQL shell by running quit;.
-7. Run npm run seed to seed the database with sample data.
-8. Start the server by running npm start.
+4. Run 'mysql -u <your_mysql_username> -p' and enter your MySQL password when prompted.
+5. In the MySQL shell, run 'source db/schema.sql;' to create the database.
+6. Exit the MySQL shell by running 'quit;'.
+7. Run 'npm run seed' to seed the database with sample data.
+8. Start the server by running 'npm run start'.
 
 
 ## Usage
