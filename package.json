@@ -1,11 +1,26 @@
 {
-    "name": "-backend",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.mjs",
-    "scripts": {
-      "start": "node server.mjs",
-      "seed": "node seed.mjs"
-    }
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "seed": "node seed.mjs"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.13"
   }
-  
+}
