@@ -1,3 +1,4 @@
+import pool from './db.mjs';
 import express from 'express';
 import routes from './routes/index.mjs';
 import sequelize from './config/connection.mjs';

@@ -1,3 +1,4 @@
+import pool from './db.mjs';
 import sequelize from '../config/connection.mjs';
 import seedAll from './seedAll.mjs';
 

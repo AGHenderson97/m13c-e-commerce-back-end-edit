@@ -1,3 +1,4 @@
+import pool from './db.mjs';
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../config/connection.mjs';
 

@@ -1,3 +1,4 @@
+import pool from './db.mjs';
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 

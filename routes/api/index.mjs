@@ -1,3 +1,4 @@
+import pool from './db.mjs';
 import express from 'express';
 import categoryRoutes from './category-routes.mjs';
 import productRoutes from './product-routes.mjs';
