@@ -1,7 +1,6 @@
-import pool from './db.mjs';
-import pool from './db.mjs';
 import { Model, DataTypes } from 'sequelize';
-import sequelize from '../config/connection';
+import sequelize from '../config/connection.mjs';
+import Category from './category.mjs';
 
 class Product extends Model {}
 
@@ -35,7 +34,7 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category',
+        model: Category,
         key: 'id',
       },
     }
