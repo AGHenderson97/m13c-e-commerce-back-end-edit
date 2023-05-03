@@ -27,3 +27,29 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// Create or update a product
+router.post('/', async (req, res) => {
+  try {
+    // Try to find a product with the same ID
+    const product = await Product.findByPk(req.body.id);
+    
+    // If the product doesn't exist, create a new one
+    if (!product) {
+      const newProduct = await Product.create(req.body);
+      res.status(201).json(newProduct);
+    } 
+    // Otherwise, update the existing product
+    else {
+      const updatedProduct = await Product.update(req.body, {
+        where: {
+          id: req.body.id
+        }
+      });
+      res.status(200).json(updatedProduct);
+    }
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+export default router;
