@@ -1,6 +1,5 @@
-import pool from './db.mjs';
 import { Model, DataTypes } from 'sequelize';
-import sequelize from '../config/connection.mjs';
+import sequelize from './database.mjs';
 
 class Category extends Model {}
 
@@ -10,19 +9,13 @@ Category.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
-    },
-    category_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+      autoIncrement: true
+    }
+    // Other fields go here
   },
   {
     sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'category',
+    modelName: 'category'
   }
 );
 

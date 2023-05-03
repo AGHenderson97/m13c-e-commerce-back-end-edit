@@ -1,6 +1,5 @@
 import { Router } from 'express';
-import Category from '../../models/category.mjs';
-import Product from '../../models/product.mjs';
+import { Category, Product } from '../../models/index.mjs';
 
 const router = Router();
 
