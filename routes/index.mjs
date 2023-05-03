@@ -1,12 +1,8 @@
 import express from 'express';
-import categoryRoutes from './category-routes.mjs';
-import productRoutes from './product-routes.mjs';
-import tagRoutes from './tag-routes.mjs';
+import apiRoutes from './api/index.mjs';
 
 const router = express.Router();
 
-router.use('/categories', categoryRoutes);
-router.use('/products', productRoutes);
-router.use('/tags', tagRoutes);
+router.use('/api', apiRoutes);
 
 export default router;
