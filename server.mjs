@@ -1,6 +1,5 @@
 import express from 'express';
-import apiRoutes from './routes/api/index.js';
-import htmlRoutes from './routes/html/index.js';
+import apiRoutes from './routes/api/index.mjs';
 import connection from './config/connection.mjs';
 
 const PORT = process.env.PORT || 3001;
@@ -14,7 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api', apiRoutes);
-app.use('/', htmlRoutes);
 
 // Default response for any other request (Not Found)
 app.use((req, res) => {
