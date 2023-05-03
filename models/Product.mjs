@@ -1,6 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import sequelize from '../config/connection.mjs';
-import Category from './category.mjs';
+import Category from './Category.mjs';
 
 class Product extends Model {}
 
