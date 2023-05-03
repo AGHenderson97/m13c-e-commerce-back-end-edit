@@ -1,5 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
-import sequelize from '../config/connection.mjs';
+import sequelize from '../config/connection';
 
 class Product extends Model {}
 
@@ -32,4 +32,18 @@ Product.init(
     },
     category_id: {
       type: DataTypes.INTEGER,
-      reference: {
+      references: {
+        model: 'category',
+        key: 'id',
+      },
+    }
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'product'
+  }
+);
+
+export default Product;
