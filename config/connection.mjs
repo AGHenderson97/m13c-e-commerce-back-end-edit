@@ -1,13 +1,14 @@
-import pool from '../db/db.mjs';
-import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
-
 dotenv.config();
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-  host: 'localhost',
-  dialect: 'mysql',
-  port: 3306
+import pool from '../db/db.js';
+
+pool.getConnection((err) => {
+  if (err) {
+    console.error(`Error connecting to database: ${err}`);
+    return;
+  }
+  console.log(`Connected to database with threadId ${pool.threadId}`);
 });
 
-export default sequelize;
+export default pool;

@@ -1,16 +1,29 @@
-import pool from './db/db.mjs';
 import express from 'express';
-import routes from './routes/index.mjs';
-import sequelize from './config/connection.mjs';
+import apiRoutes from './routes/api/index.js';
+import htmlRoutes from './routes/html/index.js';
+import connection from './config/connection.mjs';
 
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
 
+// Middleware for JSON parsing
 app.use(express.json());
+
+// Middleware for URL encoded data
 app.use(express.urlencoded({ extended: true }));
 
-app.use(routes);
+// Routes
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
+// Default response for any other request (Not Found)
+app.use((req, res) => {
+  res.status(404).end();
+});
+
+// Connection listener
+connection.on('connect', () => {
+  app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
 });
