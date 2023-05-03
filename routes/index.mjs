@@ -1,4 +1,4 @@
-import pool from './db.mjs';
+import pool from '.db/db.mjs';
 import express from 'express';
 import apiRoutes from './api/index.mjs';
 
