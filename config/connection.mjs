@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import pool from '../db/db.mjs';
+import pool from '../database.mjs';
 
 pool.getConnection((err) => {
   if (err) {

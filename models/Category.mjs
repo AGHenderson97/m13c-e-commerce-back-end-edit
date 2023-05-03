@@ -1,5 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
-import sequelize from './database.mjs';
+import sequelize from '../config/database.mjs';
 
 class Category extends Model {}
 
