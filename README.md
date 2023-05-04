@@ -49,7 +49,7 @@ Please note that this project is only focused on the back end, and there is no f
 
 ## Demo Video
 
-[Demo Video](https://) - A walkthrough video demonstrating the application's functionality.
+[Demo Video](https://drive.google.com/file/d/1vU3UWp_X4LY_VBRb9Ky25Z0_TrdUcxfa/view?usp=share_link) - A walkthrough video demonstrating the application's functionality.
 
 
 ## Technologies
